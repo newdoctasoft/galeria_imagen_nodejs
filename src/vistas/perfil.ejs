@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PERFIL DE LA IMAGEN</title>
+    <%- include("parcial/encabezado") -%>
+</head>
+
+<body>
+
+    <%- include("parcial/navegacion") %>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+
+                <div class="card">
+                    <img src="<%= imagen.path %>" class="card-img-top" alt="<%= imagen.filename %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= imagen.titulo %>
+                        </h5>
+                        <p class="card-text">
+                            <%= imagen.descripcion %>
+                        </p> 
+                        <a href="/imagen/<%= imagen._id%>/eliminar" class="btn btn-danger btn-block">
+                            ELIMINAR
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
